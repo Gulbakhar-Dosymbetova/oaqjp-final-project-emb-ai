@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 900px;
+            margin: 70px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 38px;
+        }
+        p {
+            color: #4b5563;
+        }
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            box-sizing: border-box;
+            padding: 14px;
+            margin-top: 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 17px;
+            resize: vertical;
+        }
+        button {
+            margin-top: 16px;
+            padding: 12px 22px;
+            border: 0;
+            border-radius: 9px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        #system_response {
+            margin-top: 28px;
+            padding: 18px;
+            min-height: 42px;
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script src="{{ url_for('static', filename='mywebscript.js') }}" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Emotion Detector</h1>
+        <p>
+            Enter an English sentence and the application will identify
+            emotion scores and the dominant emotion.
+        </p>
+
+        <textarea
+            id="textToAnalyze"
+            placeholder="Example: I am glad this happened"
+        ></textarea>
+
+        <br>
+        <button type="button" onclick="runEmotionAnalysis()">
+            Analyze Emotion
+        </button>
+
+        <div id="system_response">The analysis result will appear here.</div>
+    </main>
+</body>
+</html>

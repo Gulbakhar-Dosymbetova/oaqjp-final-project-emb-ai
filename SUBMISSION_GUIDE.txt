@@ -1,0 +1,28 @@
+EMOTION DETECTOR FINAL PROJECT - QUICK GUIDE
+
+Run:
+1) python3.11 server.py
+2) In Skills Network Cloud IDE open:
+   Skills Network -> Launch Application
+3) Enter port: 5000
+
+Question 11 screenshot:
+- Enter: I am glad this happened
+- Click: Analyze Emotion
+- Confirm that the result ends with dominant emotion = joy.
+- Save screenshot as: 6b_deployment_test.png
+
+Question 14 screenshot:
+- Leave the text box empty.
+- Click: Analyze Emotion
+- Confirm message: Invalid text! Please try again!
+- Save screenshot as: 7c_error_handling_interface.png
+
+Unit tests:
+python3.11 test_emotion_detection.py
+
+Static analysis:
+pylint server.py
+
+GitHub target:
+https://github.com/Gulbakhar-Dosymbetova/oaqjp-final-project-emb-ai
